@@ -95,6 +95,14 @@ jobs:
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        
+    - name: 上传.config配置文件在 github actions
+      continue-on-error: true
+      if: env.UPLOAD_CONFIG == 'true'
+      uses: actions/upload-artifact@main
+      with:
+        name: .config_${{ env.SOURCE }}_${{ env.TARGET_PROFILE }}_${{ env.Firmware_Date }}
+        path: config.txt
 
     - name: Download package
       id: package
@@ -186,14 +194,6 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*     
-        
-    - name: 上传.config配置文件在 github actions
-      continue-on-error: true
-      if: env.UPLOAD_CONFIG == 'true'
-      uses: actions/upload-artifact@main
-      with:
-        name: .config_${{ env.SOURCE }}_${{ env.TARGET_PROFILE }}_${{ env.Firmware_Date }}
-        path: config.txt
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
