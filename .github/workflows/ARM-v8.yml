@@ -19,7 +19,7 @@ on:
         required: false
         default: 'false'
   schedule:
-   # - cron: '5 17 * * *'
+  #  - cron: '5 17 * * *'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -95,14 +95,6 @@ jobs:
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        
-    - name: 上传.config配置文件在 github actions
-      continue-on-error: true
-      if: env.UPLOAD_CONFIG == 'true'
-      uses: actions/upload-artifact@main
-      with:
-        name: .config_${{ env.SOURCE }}_${{ env.TARGET_PROFILE }}_${{ env.Firmware_Date }}
-        path: config.txt
 
     - name: Download package
       id: package
@@ -189,17 +181,11 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-        files: ${{ env.FIRMWARE }}/*     
-
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 3
+        files: ${{ env.FIRMWARE }}/*
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
@@ -208,4 +194,4 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN3 }}
