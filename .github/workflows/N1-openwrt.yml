@@ -70,7 +70,7 @@ jobs:
       if: (!cancelled())
       uses: ophub/flippy-openwrt-actions@main
       env:
-        OPENWRT_ARMVIRT: https://github.com/Zane-E/OP-N1/releases/download/ARMv8_ROOTFS/openwrt-armvirt-64-generic-rootfs.tar.gz
+        OPENWRT_ARMVIRT: https://github.com/gdstchdr1/0p-n1/releases/download/ARMv8_ROOTFS/openwrt-armvirt-64-generic-rootfs.tar.gz
         PACKAGE_SOC: s905d
         WHOAMI: Demons
         KERNEL_REPO_URL: https://github.com/breakings/OpenWrt/tree/main/opt
@@ -99,7 +99,7 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
         artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
         body: |
-          - 默认IP：192.168.1.1 默认密码：password (WiFi密码同）
+          - 默认IP：192.168.1.1 默认密码：password
           - 当前使用版本:【编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录】
           ${{ env.useVersionInfo }}
 
