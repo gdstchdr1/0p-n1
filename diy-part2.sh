@@ -28,7 +28,7 @@ sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/foot
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
-
+rm -rf feeds/kenzok8/openwrt-packages/luci-app-alist
 git clone https://github.com/sbwml/luci-app-alist package/alist
 
 #微信推送
