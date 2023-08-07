@@ -26,10 +26,10 @@ git clone -b 18.06 https://github.com/SpeedPartner/luci-theme-argon-18.06-patch.
 sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/footer.htm
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
-rm -rf feeds/kenzok8/openwrt-packages/luci-app-alist
-git clone https://github.com/sbwml/luci-app-alist package/alist
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+# rm -rf feeds/kenzok8/openwrt-packages/luci-app-alist
+# git clone https://github.com/sbwml/luci-app-alist package/alist
 
 #微信推送
 rm -rf feeds/kenzo/luci-app-serverchan
