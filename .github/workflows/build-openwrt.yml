@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: cr660x-OpenWrt
 
 on:
   repository_dispatch:
@@ -32,6 +32,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+  FILE_NAME: cr660x-OpenWrt
+  PRODUCT_NAME: cr660x-OpenWrt
 
 jobs:
   build:
