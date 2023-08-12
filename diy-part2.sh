@@ -14,6 +14,8 @@
 sed -i 's/192.168.1.1/192.168.5.8/g' package/base-files/files/bin/config_generate
 # poweroff
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
+git clone alist https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 #主题
 rm -rf feeds/luci/applications/luci-app-argon-config
@@ -26,10 +28,9 @@ git clone -b 18.06 https://github.com/SpeedPartner/luci-theme-argon-18.06-patch.
 sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/footer.htm
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
-# rm -rf feeds/kenzok8/openwrt-packages/luci-app-alist
-# git clone https://github.com/sbwml/luci-app-alist package/alist
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+rm -rf feeds/kenzok8/openwrt-packages/luci-app-alist
 
 #微信推送
 rm -rf feeds/kenzo/luci-app-serverchan
