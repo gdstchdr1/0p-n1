@@ -14,6 +14,7 @@
 sed -i 's/192.168.1.1/192.168.5.8/g' package/base-files/files/bin/config_generate
 # poweroff
 # git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
+git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 
 #主题
 rm -rf feeds/luci/applications/luci-app-argon-config
