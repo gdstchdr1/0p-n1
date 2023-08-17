@@ -101,7 +101,7 @@ jobs:
         id: download
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         run: |
-          armvirt_tarfile_repo="ophub/amlogic-s9xxx-openwrt"
+          armvirt_tarfile_repo="gdstchdr1/0p-n1"
           releases_tag_keywords="OpenWrt_lede"
 
           armvirt_tarfile_path="openwrt/bin/targets/armvirt/64"
