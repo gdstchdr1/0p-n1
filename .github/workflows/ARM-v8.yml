@@ -207,7 +207,8 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
     - name: Package OpenWrt Firmware
-      uses: unifreq/openwrt_packit@master
+      uses: gdstchdr1/0p-n1@main
+      if: ${{ steps.download.outputs.status }} == 'success' && !cancelled()
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*rootfs.tar.gz
         KERNEL_REPO_URL: breakings/OpenWrt
