@@ -30,9 +30,9 @@ sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/foot
 # rm -rf feeds/kenzo/luci-app-serverchan
 # rm -rf feeds/luci/applications/luci-app-serverchan
 # git clone -b openwrt-18.06 https://github.com/tty228/luci-app-serverchan.git feeds/luci/applications/luci-app-serverchan
-rm -rf feeds/sirpdboy/luci-app-ddns-go
-rm -rf feeds/luci/applications/luci-app-ddns-go
-git clone https://github.com/sirpdboy/luci-app-ddns-go.git feeds/luci/applications/luci-app-ddns-go
+# rm -rf feeds/sirpdboy/luci-app-ddns-go
+# rm -rf feeds/luci/applications/luci-app-ddns-go
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
 
 # 修改主题背景
