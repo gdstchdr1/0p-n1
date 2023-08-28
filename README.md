@@ -10,6 +10,19 @@ lean固件源码地址：https://github.com/coolsnowwolf/openwrt
 
 插件应用说明地址：https://www.right.com.cn/forum/thread-3682029-1-1.html
 
+由衷感谢所有为openwrt无私奉献的大佬们。
+
+ip：192.168.5.8 密码：password
+
+编译说明： 复制 SSH 连接命令粘贴到终端内执行，或者复制链接在浏览器中打开使用网页终端。（网页终端可能会遇到黑屏的情况，按 Ctrl+C 即可） cd openwrt && make menuconfig 完成后按Ctrl+D组合键或执行exit命令退出，后续编译工作将自动进行。
+
+支持ipv6：>1、Global build settings ---> Enable IPv6 support in packages (NEW)（选上） >2、Extra packages ---> ipv6helper（选上） >3、安装好固件后在-网络-DHCP/DNS里的高级设置-把“禁止解析 IPv6 DNS 记录”的“√”去掉
+
+不要ipv6：Global build settings ---> Enable IPv6 support in packages (NEW)（不选），就好了
+
+网络共享luci-app-samba默认是去不掉的，在：Extra packages ---> autosamba（不选），就可以不选luci-app-samba
+
+编译成功跟失败都邮件通知--右上角头像-->Settings-->Notifications的差不多最下面找到《Send notifications for failed workflows only》把前面的勾去掉就好了
 
 # Actions-OpenWrt
 
