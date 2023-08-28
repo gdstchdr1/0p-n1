@@ -1,5 +1,16 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
+固件来源 P3TERX云编译脚本地址：https://github.com/P3TERX/Actions-OpenWrt
+
+中文教程地址：https://p3terx.com/archives/build-openwrt-with-github-actions.html
+
+lean固件源码地址：https://github.com/coolsnowwolf/openwrt
+
+插件仓库：https://github.com/liuran001/openwrt-packages https://github.com/kenzok8/openwrt-packages
+
+插件应用说明地址：https://www.right.com.cn/forum/thread-3682029-1-1.html
+
+
 # Actions-OpenWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
