@@ -33,6 +33,7 @@ sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/foot
 # rm -rf feeds/sirpdboy/luci-app-ddns-go
 # rm -rf feeds/luci/applications/luci-app-ddns-go
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
 
 
 # 修改主题背景
