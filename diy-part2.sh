@@ -26,6 +26,9 @@ git clone -b 18.06 https://github.com/SpeedPartner/luci-theme-argon-18.06-patch.
 sed -i '41,59d' feeds/luci/themes/luci-theme-argon/luasrc/view/themes/argon/footer.htm
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
+#修改插件源
+rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
+
 #微信推送
 # rm -rf feeds/kenzo/luci-app-serverchan
 # rm -rf feeds/luci/applications/luci-app-serverchan
